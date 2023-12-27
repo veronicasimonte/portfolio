@@ -1,17 +1,192 @@
+/* ---- uploadfont ---- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
-* {
+
+/* ---- variabili ---- */
+:root {
+    --primary-color:#000;
+    --secondary-color:#333;
+    --tertiary-color:whitesmoke;
+
+}
+
+
+/* ---- reset ---- */
+h1,h2,h3,h4,h5,h6,p,ol,ul{
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+ol,ul{
+    padding-left: 20px;
+    line-height: 1.5;
+  }
+  a {text-decoration: none; }
+  li {list-style: none;}
+  ul {list-style-type:none;}
+  img{
+    height: auto;
+  }
+  
+  h1{
+    font-size: 4rem;
+  } 
+  
+  h2{
+    font-size: 3rem;
+  } 
+  
+  h3{
+    font-size: 2rem;
+  } 
+  
+  h4{
+    font-size: 1rem;
+  } 
+  
+  h5{
+    font-size: 0.8rem;
+  } 
+  h6{
+    font-size: 0.6rem;
+  }
+
+  /* ---- stili di base ----- */
+  body, html{ 
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1; 
+    font-size: 16px; 
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
- }
+  }
+  
+  *,*:before,*:after{ 
+    box-sizing: border-box; /* ---- importante ----- */
+  }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; 
-    text-align: center; /* Center the text horizontally */
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  /* ---- Sistema di titoli ---- */
+h1, .text-1 {font-size: 3.6rem;margin-bottom:1rem}
+h2, .text-2 {font-size: 2.2rem;margin-bottom:1rem;line-height: 1;}
+h3, .text-3  {font-size: 1.8rem;margin-bottom:1rem;line-height: 1.2;}
+h4, .text-4 {font-size: 1.5rem;margin-bottom:1rem;line-height: 1.2;}
+p{font-size: 1rem;margin-bottom:1rem; line-height: 1.5;}
+
+
+.header{
+    background-color:var(--primary-color);
+    color: var(--tertiary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    padding: 10px 15px;
 }
+.header__content{
+   
+    width: 100%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__logo{
+    display: flex; 
+    align-items: center;
+    color:var(--tertiary-color)
+  }
+  .header__menu{
+    padding: 0;margin: 0;
+  }
+  .header__menu li{
+    display: inline-block;
+  }
+  .header__menu li a{
+    color:var(--tertiary-color);
+    opacity: 1;
+    display: block;
+    padding: 16px;
+    font-size: 15px;
+  }
+  .header__menu a.underline{text-decoration: underline;color:#EF6362}
+  
+
+/* ! Grid System  (flex + css grid) creo delle classi per facilitare il processo di creazione del layout */
+.grid { margin: 0 auto; padding: 0 15px; max-width: 1250px; display: flex; flex-flow: row; flex-wrap: wrap;}
+.grid--center{justify-content: center;}
+.col{ flex: 1;}
+
+[class*='col-'] { position: relative;padding: 0 15px;}
+
+.col-20{ width: 20%; }
+.col-25{ width: 25%; }
+.col-30{ width: 30%; }
+.col-33{ width: 33.33%; }
+.col-50{ width: 50%; }
+.col-70{ width: 70%; }
+.col-80{ width: 80%; }
+.col-100{ width: 100%; }
+
+
+/* ! Helpers  */
+.mt-0{margin-top: 0 }
+.mt-1{margin-top: 10px}
+.mt-2{margin-top: 20px}
+.mt-3{margin-top: 40px}
+.mt-4{margin-top: 100px }
+
+.mb-0{margin-bottom: 0}
+.mb-1{margin-bottom: 10px}
+.mb-2{margin-bottom: 20px}
+.mb-3{margin-bottom: 40px}
+.mb-4{margin-bottom: 100px}
+
+.p-0{padding: 0}
+.p-1{padding: 10px}
+.p-2{padding: 20px}
+.p-3{padding: 40px}
+.p-4{padding: 100px}
+
+.pt-1{padding-top: 10px;}
+.pt-3{padding-top: 20px;}
+.pt-3{padding-top: 40px;}
+.pt-4{padding-top: 15vh;}
+
+.pb-1{padding-bottom: 10px;}
+.pb-2{padding-bottom: 20px;}
+.pb-3{padding-bottom: 40px;}
+.pb-4{padding-bottom: 15vh;}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.img-res { width: 100%; height: auto; margin-bottom: 20px;vertical-align: middle;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries // min = leggi "almeno"  max = leggi "massimo" */
+/* stili tablet piccoli */
+@media screen and (min-width: 620px) {
+
+}
+/* stili table
+
+/* stili tablet grandi e laptops */
+/* stili desktop */

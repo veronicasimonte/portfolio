@@ -1,125 +1,211 @@
-/* ---- uploadfont ---- */
-@font-face {
-    font-family: 'Montserrat';
-    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+/* 
+display: grid e display: flex sono entrambi proprietÃ  che si possono dare al layout della pagina, ma esse usano un approccio diverso
+
+Le differenze tra di loro:
+
+    Modello di Layout:
+        Flexbox (display: flex): Ãˆ un sistema di layout unidimensionale, il che significa che gestisce gli elementi in una riga o in una colonna. Ãˆ adatto per disporre gli elementi lungo un solo asse, orizzontalmente o verticalmente.
+        Grid (display: grid): Ãˆ un sistema di layout bidimensionale, che consente di creare layout con sia righe che colonne. Ãˆ piÃ¹ versatile per la creazione di layout complessi basati su griglie.
+
+    Orientamento:
+        Flexbox: Utilizzato principalmente per creare layout in una singola dimensione, sia come riga che come colonna.
+        Grid: Consente sia righe che colonne, fornendo un layout bidimensionale.
+
+    **Differenza principale** Allineamento degli Elementi Figli:
+        Flexbox: Tratta l'allineamento degli elementi lungo l'asse principale (per righe o colonne).
+        Grid: Consente l'allineamento sia nella direzione delle righe che delle colonne in modo indipendente.
+
+    Ordinamento:
+        Flexbox: La proprietÃ  order consente di controllare l'ordine in cui gli elementi flessibili appaiono nel contenitore flessibile.
+        Grid: La proprietÃ  order non viene utilizzata nei layout della griglia. Invece, Ã¨ possibile controllare l'ordine utilizzando la proprietÃ  grid-template-areas o posizionando gli elementi in linee di griglia specifiche.
+
+    Comportamento Predefinito:
+        Flexbox: Gli elementi in un contenitore flessibile cercheranno, per impostazione predefinita, di adattarsi a una singola riga.
+        Grid: Gli elementi in un contenitore della griglia cercheranno, per impostazione predefinita, di riempire lo spazio disponibile sia nelle righe che nelle colonne.
+
+    Casi d'Uso:
+        Flexbox: Ideale per disporre gli elementi in una singola riga o colonna, come menu di navigazione, barre degli strumenti o elementi all'interno di un contenitore flessibile.
+        Grid: Adatto per creare layout complessi con righe e colonne, come layout di intere pagine o componenti con design strutturati basati su griglie.
+
+    Annidamento:
+        Flexbox: Ãˆ possibile annidare contenitori flessibili l'uno dentro l'altro.
+        Grid: Ãˆ possibile annidare contenitori della griglia l'uno dentro l'altro, consentendo layout piÃ¹ intricati e modulari.
+
+In molti casi, queste tecniche di layout non sono mutualmente esclusive e possono essere utilizzate insieme per ottenere design piÃ¹ complessi. Spesso, Flexbox viene utilizzato all'interno degli elementi della griglia o in combinazione con layout della griglia per gestire esigenze di layout su piccola scala all'interno di design piÃ¹ ampi e strutturati basati su griglie.
+*/
+
+/* In questo foglio di stile attuo un mobile first approach => smartphone, tablets, larger screens */
 
 /* ---- variabili ---- */
-:root {
-    --primary-color:#000;
-    --secondary-color:#333;
-    --tertiary-color:whitesmoke;
-
+:root{
+  --menu-bg: #000; 
+  --header-color: #333;
+  --secondary-color: whitesmoke;
 }
 
-
 /* ---- reset ---- */
-h1,h2,h3,h4,h5,h6,p,ol,ul{
-    margin: 0 0 1rem 0;
-    padding: 0;
+/* em Ã¨ una unitÃ  scalabile, al contrario dei pixel (fixed). Questo significa che prende la misura default e la moltiplica per il numero che scelgo (es: 4em = 4xmisura di base) ---- */
+h1,h2,h3,h4,h5,h6, p, ol, ul{
+  margin: 0 0 1rem 0;
+  padding: 0;
 }
 
 ol,ul{
-    padding-left: 20px;
-    line-height: 1.5;
-  }
-  a {text-decoration: none; }
-  li {list-style: none;}
-  ul {list-style-type:none;}
-  img{
-    height: auto;
-  }
-  
-  h1{
-    font-size: 4rem;
-  } 
-  
-  h2{
-    font-size: 3rem;
-  } 
-  
-  h3{
-    font-size: 2rem;
-  } 
-  
-  h4{
-    font-size: 1rem;
-  } 
-  
-  h5{
-    font-size: 0.8rem;
-  } 
-  h6{
-    font-size: 0.6rem;
-  }
+  padding-left: 20px;
+  line-height: 1.5;
+}
 
-  /* ---- stili di base ----- */
-  body, html{ 
-    font-family: 'Montserrat', sans-serif; 
-    line-height: 1; 
-    font-size: 16px; 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  *,*:before,*:after{ 
-    box-sizing: border-box; /* ---- importante ----- */
-  }
+li {list-style: none;}
+ul {list-style-type:none;}
 
-  /* ---- Sistema di titoli ---- */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+img{
+  height: auto;
+}
+
+h1{
+  font-size: 4rem;
+} 
+
+h2{
+  font-size: 3rem;
+} 
+
+h3{
+  font-size: 2rem;
+} 
+
+h4{
+  font-size: 1rem;
+  font-weight: 100;
+} 
+
+h5{
+  font-size: 0.8rem;
+} 
+h6{
+  font-size: 0.6rem;
+}
+a{
+  text-decoration:none;
+  margin: 0.2em;
+}
+
+body, html{ 
+  font-family: 'Montserrat', sans-serif; 
+  line-height: 1; 
+  font-size: 16px; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,*:before,*:after{ 
+  box-sizing: border-box; 
+}
+
+/* ---- stili di base ----- */
+html{
+  scroll-behavior: smooth;
+}
+body{ 
+  background:  var(--menu-bg); 
+  color: var(--secondary-color);
+  overflow-x: hidden;
+  font-family: Montserrat;
+}
+
+/* ---- fonts ----- */
+@font-face {
+  font-family: 'Montserrat'; /* ---- qui posso chiamarlo anche 'font di Veronica' ----- */
+  src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
+
+/* ---- ! Sistema di titoli ---- */
 h1, .text-1 {font-size: 3.6rem;margin-bottom:1rem}
 h2, .text-2 {font-size: 2.2rem;margin-bottom:1rem;line-height: 1;}
 h3, .text-3  {font-size: 1.8rem;margin-bottom:1rem;line-height: 1.2;}
 h4, .text-4 {font-size: 1.5rem;margin-bottom:1rem;line-height: 1.2;}
 p{font-size: 1rem;margin-bottom:1rem; line-height: 1.5;}
+.text-center{text-align: center;}
 
 
-.header{
-    background-color:var(--primary-color);
-    color: var(--tertiary-color);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100%;
-    padding: 10px 15px;
+
+/*>>>>>>>>>>>><< Continua qui */
+
+.header{ 
+background-color: var(--menu-bg); 
+color: var(--header-color);
+position: fixed; 
+top:0;  /* non c'Ã¨ bisogno che scriva 'margin-top' perchÃ¨ la posizione Ã¨ fixed*/
+left:0; 
+z-index: 9999; 
+width: 100%; 
+padding: 5vh 5vw; 
 }
 .header__content{
-   
-    width: 100%;
-    margin: 0 auto; 
-    display: flex;
-    justify-content: space-between;
-  }
-  .header__logo{
-    display: flex; 
-    align-items: center;
-    color:var(--tertiary-color)
-  }
-  .header__menu{
-    padding: 0;margin: 0;
-  }
-  .header__menu li{
-    display: inline-block;
-  }
-  .header__menu li a{
-    color:var(--tertiary-color);
-    opacity: 1;
-    display: block;
-    padding: 16px;
-    font-size: 15px;
-  }
-  .header__menu a.underline{text-decoration: underline;color:#EF6362}
-  
+max-width: 1200px;
+width: 100%;
+margin: 0 auto; 
+display: flex;
+justify-content: space-between;
+}
+.header__logo{
+display: flex; 
+align-items: center;
+color:var(--secondary-color);
+font-size: 1.6em;
+}
+.header__menu{
+padding: 0;margin: 0;
+}
+.header__menu li{
+display: inline-block; /*visualizzazone in row*/
+}
+.header__menu li a{
+color:var(--secondary-color);
+opacity: 1;
+display: block;
+padding: 0.1vh;  /*padding elementi header da modificare*/
+font-size: 1.6em;
+}
+.header__menu a.underline{text-decoration: underline;color:#EF6362}
 
-/* ! Grid System  (flex + css grid) creo delle classi per facilitare il processo di creazione del layout */
-.grid { margin: 0 auto; padding: 0 15px; max-width: 1250px; display: flex; flex-flow: row; flex-wrap: wrap;}
+
+canvas {
+position: fixed;
+z-index: 9999;
+pointer-events: none;
+}
+
+.project-image {
+opacity: 0%;
+position: absolute;
+top: -100%;
+pointer-events: none;
+user-select: none;
+}
+
+/* ! Spacer */
+.spacer{height: 100px;}
+
+
+/* ! Grid System  (flex + css grid) */
+.grid { margin: 0 auto; padding: 0 1vw; max-width: 1250px; display: flex; flex-flow: row; flex-wrap: wrap;}
 .grid--center{justify-content: center;}
 .col{ flex: 1;}
 
-[class*='col-'] { position: relative;padding: 0 15px;}
+[class*='col-'] { position: relative;padding: 0 1vw;}
 
 .col-20{ width: 20%; }
 .col-25{ width: 25%; }
@@ -167,26 +253,50 @@ p{font-size: 1rem;margin-bottom:1rem; line-height: 1.5;}
 
 
 
+/* Helpers - Utility */
+.round{border-radius: 20px;}
+.spacer{height: 10vh;}
+.relative{position: relative;}
+.overflow-h{overflow: hidden;}
 
 
+.img-small{height: 270px;object-fit: cover;}
+.ionicon{width: 20px;height: 20px;margin: 10px;}
+.font-normal{font-weight: 400;}
 
 
-
-
-
-
-
-
-
-
-
-
-/* media queries // min = leggi "almeno"  max = leggi "massimo" */
-/* stili tablet piccoli */
-@media screen and (min-width: 620px) {
-
+/* ! Cover */
+.cover{ 
+text-align: center; padding:10px; min-height:600px; width:100%; 
+display:flex; flex-direction:column; justify-content:center; 
+background-position: center center; background-size:cover;
 }
-/* stili table
+.cover * {color:#fff}
 
-/* stili tablet grandi e laptops */
-/* stili desktop */
+/* Hero */
+.blob{position: absolute; top:-20%; left:-20%; width: 140%;z-index: -1;}
+.hero{min-height: 100vh;display: flex;align-items: center;}
+
+/* Footer */
+.footer{background-color: #EF6362;color:#fff}
+.footer-bottom{background-color: #ad3939;color:#fff; padding: 20px;text-align: center;margin-bottom: 0;}
+.footer-bottom a{color:#fff}
+
+/* ! Button System */
+.button { 
+font-size: 1rem; text-transform: uppercase; background: #EF6362; color:#fff; 
+text-decoration: none;padding: 14px 25px; display: inline-block;
+border-radius: 4px; font-weight: 700;
+}  
+
+.button:hover{
+background: #333; 
+}
+
+.button-small { 
+font-size: 1rem; text-transform: uppercase; background: #EF6362; color:#fff; 
+text-decoration: none;padding: 10px 20px; display: inline-block;
+border-radius: 4px; font-weight: 700;
+} 
+
+

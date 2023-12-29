@@ -11,12 +11,12 @@ function lerp(start, end, t){           // funzione lerp: mi regola i tempi (dis
 let imgIndex = 0;
 // Carico le immagini in un array (lista), per vederle facilmente
 const images = [
-    '1.jpeg',
-    '2.jpeg',
-    '3.jpeg',
-    '4.jpeg',
-    '5.jpeg',
-    '6.jpeg'
+    '1.jpg',
+    '2.jpg',
+    '3.jpg',
+    '4.jpg',
+    '5.jpg',
+    '6.jpg'
 ]
 
 let imgArr = []; // lista vuota, per iterare dopo

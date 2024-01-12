@@ -5,12 +5,11 @@
 
 /* stili smartphone orientamento portrait */
 @media screen and (min-width: 321px) and (max-width: 480px) {
-    h1{
+      
+  h1{
     font-size: 3rem;
     font-weight: 100;
-    }
-
-
+  } 
 }
 
 

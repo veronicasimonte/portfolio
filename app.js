@@ -1,7 +1,7 @@
 // const, let
 const canvas = document.querySelector('canvas'); // vado a prendere il canvas che ho creato in html
 const ctx = canvas.getContext('2d'); // indicazione di stile
-const links = [...document.querySelectorAll('button')]; // stabilisco dove l'immagine deve comparire
+const links = [...document.querySelectorAll('button#sbarrato')]; // stabilisco dove l'immagine deve comparire
 
 function lerp(start, end, t){           // funzione lerp: mi regola i tempi (dissolvenza)
     return start * (1 - t) + end * t;
@@ -11,12 +11,12 @@ function lerp(start, end, t){           // funzione lerp: mi regola i tempi (dis
 let imgIndex = 0;
 // Carico le immagini in un array (lista), per vederle facilmente
 const images = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    '5.jpg',
-    '6.jpg'
+    '1.jpeg',
+    '2.jpeg',
+    '3.jpeg',
+    '4.jpeg',
+    '5.jpeg',
+    '6.jpeg'
 ]
 
 let imgArr = []; // lista vuota, per iterare dopo

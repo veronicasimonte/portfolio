@@ -120,13 +120,13 @@ body{
   background:  var(--menu-bg); 
   color: var(--secondary-color);
   overflow-x: hidden;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
 }
 
 nav {
   position: relative;
   top: 40%;
-  left: 80%;  /* per decentrare */
+  left: 67%;  /* per decentrare */
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
@@ -134,7 +134,7 @@ nav {
 
 nav > a {
   color: rgb(184, 184, 184);
-  font-family: "Neue Montreal", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   position: relative;
   text-transform: uppercase;
@@ -191,13 +191,14 @@ nav a:hover img {
 /* ---- fonts ----- */
 @font-face {
   font-family: 'Montserrat'; /* ---- qui posso chiamarlo anche 'font di Veronica' ----- */
-  src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+  src: url('fonts/Montserrat-VariableFont_wght.ttf');
 }
 
 
 
 /* ---- ! Sistema di titoli ---- */
 h1, .text-1 {font-size: 3.6rem;margin-bottom:1rem}
+h2, .text-1 {font-size: 3.06rem;}
 h2, .text-2 {font-size: 2.2rem;margin-bottom:1rem;line-height: 1;}
 h3, .text-3  {font-size: 1.8rem;margin-bottom:1rem;line-height: 1.2;}
 h4, .text-4 {font-size: 1.5rem;margin-bottom:1rem;line-height: 1.2;}
@@ -216,7 +217,7 @@ top:0;  /* non c'Ã¨ bisogno che scriva 'margin-top' perchÃ¨ la posizione Ã�
 left:0; 
 z-index: 9999; 
 width: 100%; 
-padding: 4vh 3vw; 
+padding: 3vh 3vw; 
 }
 .header__content{
 width: 100%;
@@ -224,14 +225,16 @@ margin: 0 auto;
 display: flex;
 justify-content: space-between;
 }
+
 .header__logo{
 display: flex; 
 align-items: center;
 color:var(--secondary-color);
-font-size: 1.6em;
+font-size: 1.3em;
 }
 .header__menu{
-padding: 0;margin: 0;
+padding: 0;
+margin: 0;
 }
 .header__menu li{
 display: inline-block; /*visualizzazone in row*/
@@ -245,11 +248,13 @@ opacity: 1;
 display: block;
 padding: 0.001vh;  /*padding elementi header da modificare*/
 margin-left: 8vh;
-font-size: 1.6em;
+font-size: 1.3em;
 }
 .header__menu li a:hover {
   text-decoration: line-through;
-  text-decoration-color: #2d89fa; }
+  text-decoration-color: #2d89fa;
+  text-decoration-thickness: 0.2rem;
+ }
 
 .header__menu a.underline{
   text-decoration: line-through;
@@ -275,7 +280,13 @@ user-select: none;
 
 
 /* ! Grid System  (flex + css grid) */
-.grid { margin: 0 auto; padding: 4vh 2.6vw; display: flex; flex-flow: row; flex-wrap: wrap;}
+.grid { 
+  margin: 0; 
+  padding: 4vh 1.001vw; 
+  display: flex; 
+  flex-flow: row; 
+  flex-wrap: wrap;}
+
 .grid--center{justify-content: center;}
 .col{ flex: 1;}
 
@@ -349,9 +360,26 @@ background-position: center center; background-size:cover;
 .cover * {color:#fff}
 
 /* Hero */
-.blob{position: absolute; top:-20%; left:-20%; width: 140%;z-index: -1;}
-.hero{min-height: 100vh;display: flex;align-items: center;}
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center; 
+}
 
+/*
+#home {
+  background-image: url("https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+} */
+
+#sbarrato {
+  text-align: left;
+}
+#sbarrato:hover {
+  text-decoration: line-through;
+  text-decoration-color: #2d89fa;
+  text-decoration-thickness: 0.2rem;
+
+}
 /* Footer */
 .footer{background-color: #2d89fa;color:#fff}
 .footer-bottom{background-color: #2d89fa;color:#fff; padding: 40px;text-align: center;margin-bottom: 0;}
@@ -498,4 +526,27 @@ input[type=submit] {
   font-size: 18px;
   border-radius: 4px;
   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.footer a.footer-link {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+#Skills{
+  height: 130px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+ #IconsSkills{
+  width: 130px;
+  height: 130px;
+  display: block; /* removes extra space near images */
+}
+
+#point {
+  display: inline-block; /* removes extra space between list items*/
 }

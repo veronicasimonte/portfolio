@@ -202,21 +202,29 @@
           <p>Veronica Simonte is a UX/UI designer based in Italy. For any inquiries, you can write here ...</p>
 
           <form id="contact-form">
-            <input="hidden" name="contact_number">
-            <label for="fname">Full Name</label>
-            <input type="text" name="user_name">
+            <input type="hidden" name="contact_number">
+
+            <label for="name">Full Name</label>
+            <input 
+            type="text" 
+            class="form-control"
+            id="name" 
+            placeholder="Enter your name here">
 
             <label for="email">E-mail</label>
-            <input type="email" name="user_email">
-
-
-
-            <label for="subject">Subject</label>
-            <textarea name="message" placeholder="Write something.."></textarea>
+            <input 
+            type="email" 
+            class="form-control"
+            id="email" 
+            placeholder="Enter your email here">name="user_email">
+          
+            <label for="message">Subject</label>
+            <textarea 
+            id="message"
+            rows="3"
+            placeholder="[...]"></textarea>
             
-            
-            <input class="button-34" type="submit" value="Send">
-            <button class="button-34" role="button">Button 34</button>
+            <button class="button-34" onclick="sendMail()">send</button>
 
           </form>
 

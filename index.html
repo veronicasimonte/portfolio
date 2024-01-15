@@ -12,6 +12,33 @@
   <!--importo icone-->
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('xEQ_zjSROoPyJqBG8');
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm('contact_service', 'contact_form', this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+  
+        
+
 
 </head>
 <body>
@@ -47,22 +74,29 @@
           Creo esperienze digitali coinvolgenti, unendo arte e funzionalità. Navigo il design con occhi attenti, trasformando idee in interfacce sorprendenti. Sono un innovatore empatico, capace di comprendere le esigenze degli utenti e trasformare la visione in soluzioni digitali intuitive.</h4></button>
         <a href="" class="button">Let's talk</a>
       </div>
-      <div class="col-50 p-3 relative">
-        <img src="WhatsApp Image 2024-01-12 at 16.06.55.jpeg" class="img-res" alt="">
+      <div class="col-15 p-3 relative"></div>
+     
+      <div class="col-36 p-3 relative" >
+        <img src="loghi cert.png" class="img-res" alt="">
+        <a href="" class="button">Download my CV!</a>
       </div>
     </div>
     <div class="grid hero">
     <ul id="Skills">
-      <li id="point"><img src="https://en.js.cx/carousel/1.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/2.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/3.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/4.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/5.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/6.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/7.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/8.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/9.png" id="IconsSkills"></li>
-      <li id="point"><img src="https://en.js.cx/carousel/10.png" id="IconsSkills"></li>
+      <li id="point"><img src="figma skills 3.png" id="IconsSkills"></li>
+      <li id="point"><img src="xd skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="ai skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="ps skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="id skills 2.png" id="IconsSkills"></li>
+      <li id="point"><img src="wordpress skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="html skills 4.png" id="IconsSkills"></li>
+      <li id="point"><img src="css skills 3.png" id="IconsSkills"></li>
+      <li id="point"><img src="pr skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="UI skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="wireframe skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="graphic skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="copy skills.png" id="IconsSkills"></li>
+      <li id="point"><img src="accessibility skills.png" id="IconsSkills"></li>
     </ul>
     </div>
 
@@ -72,9 +106,9 @@
       <nav id="nav">
         <!--Work 1-->
         <a href="#">
-          <span>COSTOLETTA</span> <!-- <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> -->
+          <span>ORGASMIC</span> <!-- <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"> -->
           <div class="assets">
-            <img src="5.jpg" />
+            <img src="COME TO ORGASMIC 2.jpg" />
           </div>
         </a>
         <!--Work 2-->
@@ -166,23 +200,21 @@
           <h3>VERONICA SIMONTE</h3>
           <p>Veronica Simonte is a UX/UI designer based in Italy. For any inquiries, you can write here ...</p>
 
-          <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <form id="contact-form">
+            <input="hidden" name="contact_number">
+            <label for="fname">Full Name</label>
+            <input type="text" name="user_name">
 
             <label for="email">E-mail</label>
-            <input type="text" id="email" name="e-mail" placeholder="Your E-mail..">
+            <input type="email" name="user_email">
 
 
 
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-
-
-
+            <textarea name="message" placeholder="Write something.."></textarea>
+            
+            
+            <input class="button-34" type="submit" value="Send">
             <button class="button-34" role="button">Button 34</button>
 
           </form>

@@ -14,29 +14,11 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init('xEQ_zjSROoPyJqBG8');
-      })();
-  </script>
-  <script src="index (1).js"></script>
-  <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-              // generate a five digit number for the contact_number variable
-              this.contact_number.value = Math.random() * 100000 | 0;
-              // these IDs from the previous steps
-              emailjs.sendForm('contact_service', 'contact_form', this)
-                  .then(function() {
-                      console.log('SUCCESS!');
-                  }, function(error) {
-                      console.log('FAILED...', error);
-                  });
-          });
-      }
-  </script>
+  
+  
+  
+
+      
   
         
 
@@ -82,24 +64,52 @@
         <a href="" class="button">Download my CV!</a>
       </div>
     </div>
-    <div class="grid hero">
-    <ul id="Skills">
-      <li id="point"><img src="figma skills 3.png" id="IconsSkills"></li>
-      <li id="point"><img src="xd skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="ai skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="ps skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="id skills 2.png" id="IconsSkills"></li>
-      <li id="point"><img src="wordpress skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="html skills 4.png" id="IconsSkills"></li>
-      <li id="point"><img src="css skills 3.png" id="IconsSkills"></li>
-      <li id="point"><img src="pr skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="UI skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="wireframe skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="graphic skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="copy skills.png" id="IconsSkills"></li>
-      <li id="point"><img src="accessibility skills.png" id="IconsSkills"></li>
-    </ul>
-    </div>
+    <div class="slider">
+      <div class="slide-track">
+      <div class="slide">
+      <img src="figma skills 3.png" height="50" width="50" alt="" />
+      </div>
+      <div class="slide">
+      <img src="id skills 2.png" height="50" width="50" alt="" />
+      </div>
+      <div class="slide">
+      <img src="ai skills.png" height="50" width="50" alt="" />
+      </div>
+      <div class="slide">
+      <img src="ps skills.png" height="50" width="50" alt="" />
+      </div>
+      <div class="slide">
+      <img src="pr skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="wordpress skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="css skills 3.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="html skills 4.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="UI skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="graphic skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="wireframe skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="copy skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="accessibility skills.png" height="100" width="250" alt="" />
+      </div>
+      <div class="slide">
+      <img src="xd skills.png" height="100" width="250" alt="" />
+      </div>
+      </div>
+      </div>
 
     <!--Works-->
     <div class="grid hero" id="Work">
@@ -201,32 +211,26 @@
           <h3>VERONICA SIMONTE</h3>
           <p>Veronica Simonte is a UX/UI designer based in Italy. For any inquiries, you can write here ...</p>
 
-          <form id="contact-form">
-            <input type="hidden" name="contact_number">
-
-            <label for="name">Full Name</label>
-            <input 
-            type="text" 
-            class="form-control"
-            id="name" 
-            placeholder="Enter your name here">
-
-            <label for="email">E-mail</label>
-            <input 
-            type="email" 
-            class="form-control"
-            id="email" 
-            placeholder="Enter your email here">name="user_email">
+          <form id="form">
+            <div class="field">
+              <label for="message">message</label>
+              <input type="text" name="message" id="message">
+            </div>
+            <div class="field">
+              <label for="user_name">user_name</label>
+              <input type="text" name="user_name" id="user_name">
+            </div>
+            <div class="field">
+              <label for="user_email">user_email</label>
+              <input type="text" name="user_email" id="user_email">
+            </div>
+            <div class="field">
+              <label for="contact_number">contact_number</label>
+              <input type="text" name="contact_number" id="contact_number">
+            </div>
           
-            <label for="message">Subject</label>
-            <textarea 
-            id="message"
-            rows="3"
-            placeholder="[...]"></textarea>
-            
-            <button class="button-34" onclick="sendMail()">send</button>
-
-          </form>
+            <input type="submit" id="button" value="Send Email" >
+        </form>
 
 
 
@@ -302,6 +306,32 @@
     </script>
 
   <script src="app.js"></script>
+  <script type="text/javascript">
+    emailjs.init('xEQ_zjSROoPyJqBG8') // PUBLIC KEY
+  </script>
+
+  <script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'service_glrasvh'; // SERVICE_ID
+            const templateID = 'contact_form'; // TEMPLATE_ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                    alert('Sent!');
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+        });
+  </script>
 
 </body>
 </html>

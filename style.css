@@ -336,7 +336,7 @@ user-select: none;
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
-.img-res { width: 100%; height: auto; margin-bottom: 20px;vertical-align: middle;}
+.img-res { width: 65%; height: auto; margin-bottom: 20px;vertical-align: middle;}
 
 
 
@@ -636,4 +636,11 @@ input[type="submit"] {
   height: 100px;
   width: 250px;
   align-items: center;
+  }
+
+  .hero2 {
+    margin-top: 50vh;
+    min-height: 50vh;
+    display: flex;
+    align-items: center; 
   }

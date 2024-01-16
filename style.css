@@ -635,4 +635,5 @@ input[type="submit"] {
   .slider .slide {
   height: 100px;
   width: 250px;
+  align-items: center;
   }

@@ -11,7 +11,7 @@ function lerp(start, end, t){           // funzione lerp: mi regola i tempi (dis
 let imgIndex = 0;
 // Carico le immagini in un array (lista), per vederle facilmente
 const images = [
-    '1.jpeg',
+    'foto_cv.png',
     '2.jpeg',
     '3.jpeg',
     '4.jpeg',

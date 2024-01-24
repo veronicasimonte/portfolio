@@ -5,46 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatiile" content="ie=edge">
-
   <title>Veronica Simonte Portfolio</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <!--importo icone-->
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
-  
-  
   <meta property=”og:title” content='Veronica Simonte Portfolio'/>
   <meta property=”og:url” content='https://veronicasimonte.github.io/portfolio/'/>
   <meta property=”og:type” content='Portfolio website' />
   <meta property=”og:description” content='Veronica Simonte porfolio UI/UX' />
-
-      
-  
-        
-
-
 </head>
+
 <body>
-  <canvas></canvas> <!--inizializzo il canvas che mi servirà per l'immagine profilo a comparsa-->
-  
-  <div class="overflow-h">
-    <header class="header">
+  <canvas></canvas> <!--inizializzo il canvas che mi servirà per l'immagine profilo a comparsa-->  
+  <div class="overflow-h"> <!--Div principale-->
+    <!--Header-->
+    <header class="header"> 
       <div class="header__content">
-        <a class="header__logo" href="">
+        <a class="header__logo" href="#home">
           <strong>VS</strong>
         </a>
-        <ul class="header__menu underline">
-          <li data-section="about" data-section="About"><a href="#About">About</a></li>
-          <li data-section="work" data-section="Work"><a href="#Work">Works</a></li>
-          <li data-section="work" data-section="Contact"><a href="#Contact">Contact</a></li>
+        <ul class="header__menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="header__quick">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
-          <a class="button-small" href="">Contatti</a>
             <div class="icon-hamburger">
               <span></span>
               <span></span>
@@ -52,217 +39,183 @@
         </div>
       </div>
     </header>
-
-
-
     <!--Home-->
-    <div class="grid hero" id="home" id="home" data-section="home">
+    <div class="grid hero" id="home" data-section="home">
       <div class="col-100 pt-5 text-center">
         <h1>I might be your trustworthy UI/UX designer</h1>
         <br>
         <h4>Hi, I'm Veronica Simonte</h4>
       </div>
     </div>
-
     <!--Who-->
-    <div class="grid hero" id="About">
+    <section class="grid hero pt-4 mb-1" id="about">
       <div class="col-50 p-3 relative">
         <button id="sbarrato"><h2 class="text-1">Who is Veronica Simonte?</h2> <br>
         <h4>
           Creo esperienze digitali coinvolgenti, unendo arte e funzionalità. Navigo il design con occhi attenti, trasformando idee in interfacce sorprendenti. Sono un innovatore empatico, capace di comprendere le esigenze degli utenti e trasformare la visione in soluzioni digitali intuitive.</h4></button>
         <a href="mailto: veronicasimonte@gmail.com" class="button">Let's talk</a>
       </div>
-      
-     
       <div class="col-50 p-3 relative" >
-        <img src="loghi cert.png" class="img-res" height="100" width="100" alt="">
-        
-      </div>
-
+        <img src="loghi cert.png" class="img-res img-small" height="100" width="100" alt=""> 
+      </div>      
+    </section>
+    <!--Skills & Works-->
+    <section class="slider" id="work">
       <div class="col-100">
-        <h2 class="text-center">Skills</h2>
+      <h2 class="text-center mb-4">Skills</h2>
       </div>
-        
-      
-    </div>
-    <div class="slider">
       <div class="slide-track">
-      <div class="slide">
-      <img src="figma skills 3.png" height="50" width="50" alt="" />
+        <div class="slide">
+        <img src="figma skills 3.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="id skills 2.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="ai skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="ps skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="pr skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="wordpress skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="css skills 3.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="html skills 4.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="UI skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="graphic skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="wireframe skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="copy skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="accessibility skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="xd skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="figma skills 3.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="id skills 2.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="ai skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="ps skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="pr skills.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="wordpress skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="css skills 3.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="html skills 4.png" height="50" width="50" alt="" />
+        </div>
+        <div class="slide">
+        <img src="UI skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="graphic skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="wireframe skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="copy skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="accessibility skills.png" height="70" width="70" alt="" />
+        </div>
+        <div class="slide">
+        <img src="xd skills.png" height="50" width="50" alt="" />
+        </div>
       </div>
-      <div class="slide">
-      <img src="id skills 2.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="ai skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="ps skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="pr skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="wordpress skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="css skills 3.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="html skills 4.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="UI skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="graphic skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="wireframe skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="copy skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="accessibility skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="xd skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="figma skills 3.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="id skills 2.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="ai skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="ps skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="pr skills.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="wordpress skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="css skills 3.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="html skills 4.png" height="50" width="50" alt="" />
-      </div>
-      <div class="slide">
-      <img src="UI skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="graphic skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="wireframe skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="copy skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="accessibility skills.png" height="70" width="70" alt="" />
-      </div>
-      <div class="slide">
-      <img src="xd skills.png" height="50" width="50" alt="" />
-      </div>
-      </div>
-      </div>
-      
-      <div class="col-60 pt-2 text-center">
-      <a href="assets/CV Veronica Simonte.pdf" class="button" >Download my CV!</a>
-      </div>
-      
-    <!--Works-->
-    
-    
-    <div class="grid hero2"  id="Work">
-
-      <div class="col-100">
+    </section>     
+    <!--Button CV--> 
+    <section class="col-100 text-center">
+      <a href="assets/CV Veronica Simonte.pdf" class="button">Download my CV!</a>
+      <div class="col-100 mt-4">
         <h2 class="text-center">Works</h2>
       </div>
-      <!--Nav-->
-      <nav id="nav">
-        
-        <!--Work 3-->
-        <a href="#">
-          <span>ORGASMIC</span>
-          <div class="img-wrapper">
-            <img
-              src="COME TO ORGASMIC.jpg" />
-          </div>
-        </a>
-        <!--Work 4-->
-        <a href="#">
-          <span>SUNNEE</span>
-          <div class="img-wrapper">
-            <img
-              src="SUNNEE_ LET'S DIVE.jpg" />
-          </div>
-        </a>
-        <!--Work 5-->
-        <a href="#">
-          <span>VESTITO VERDE</span>
-          <div class="img-wrapper">
-            <img
-              src="VESTITO VERDE.jpg" />
-          </div>
-        </a>
-        <!--Work 6-->
-        <a href="#">
-          <span>WORK IN PROGRESS</span>
-          <div class="img-wrapper">
-            <img
-              src="WORK IN PROGRESS.jpg" />
-          </div>
-        </a>
-        <!--Work 7-->
-        <a href="#">
-          <span>WORK IN PROGRESS</span>
-          <div class="img-wrapper">
-            <img
-              src="WORK IN PROGRESS.jpg" />
-          </div>
-        </a>
-        <!--Work 8-->
-        <a href="#">
-          <span>WORK IN PROGRESS</span>
-          <div class="img-wrapper">
-            <img
-              src="WORK IN PROGRESS.jpg" />
-          </div>
-        </a>
-        
-      </nav>
-    </div>
-
-    <div class="grid hero" id="Work">
-      <div class="col-50 p-3 relative">
-        <img src="WhatsApp Image 2024-01-12 at 16.06.55.jpeg" class="img-res" alt="">
+      <div class="text-center mt-4 ">
+        <nav id="nav">    
+          <!--Work 3-->
+          <a>
+            <span data-img="1">ORGASMIC</span>
+            <div class="img-wrapper">
+              <img
+                src="COME TO ORGASMIC.jpg" />
+            </div>
+          </a>
+          <!--Work 4-->
+          <a href="#">
+            <span>SUNNEE</span>
+            <div class="img-wrapper">
+              <img
+                src="SUNNEE_ LET'S DIVE.jpg" />
+            </div>
+          </a>
+          <!--Work 5-->
+          <a href="#">
+            <span>VESTITO VERDE</span>
+            <div class="img-wrapper">
+              <img
+                src="VESTITO VERDE.jpg" />
+            </div>
+          </a>
+          <!--Work 6-->
+          <a href="#">
+            <span>WORK IN PROGRESS</span>
+            <div class="img-wrapper">
+              <img
+                src="WORK IN PROGRESS.jpg" />
+            </div>
+          </a>
+          <!--Work 7-->
+          <a href="#">
+            <span>WORK IN PROGRESS</span>
+            <div class="img-wrapper">
+              <img
+                src="WORK IN PROGRESS.jpg" />
+            </div>
+          </a>
+          <!--Work 8-->
+          <a href="#">
+            <span>WORK IN PROGRESS</span>
+            <div class="img-wrapper">
+              <img
+                src="WORK IN PROGRESS.jpg" />
+            </div>
+          </a>
+        </nav>
       </div>
-      <div class="col-50 p-3 text-center">
-        <h2 class="text-1">Il nostro metodo di progettazione</h2>
-        <h3>Next Level System</h3>
-        <p>Lorem ipsum dolor sit amet consectetur o quibusdam voluptatum aut inventore incidunt impedit.</p>
-        <a href="" class="button">Scopri di più</a>
-      </div>
-    </div>
-
-
-
+    </section>
     <!--Footer-->
-
-    <footer class="footer grid  pb-1" id="Contact">
-      <div class="grid">
-        <div class="col-33 mt-2">
+    <section id="contact">
+      <footer class="footer grid p-3">
+        <section class="col-50"> 
           <h3>VERONICA SIMONTE</h3>
           <p>Veronica Simonte is a UX/UI designer based in Italy. For any inquiries, you can write here ...</p>
-
           <form id="form">
             <div class="field">
               <label for="message">message</label>
@@ -282,15 +235,10 @@
             </div>
           
             <input class="button-34"  type="submit" id="button" value="Send Email" >
-        </form>
-
-
-
-        </div>
-        <div class="col-33 mt-2"></div>
-        <div class="col-32 mt-2" id="icons">
+          </form>
+        </section>
+        <div id="icons" class="col-50">
           <ul>
-
             <li> <a href="https://github.com/veronicasimonte"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="46.5" viewBox="0 0 496 512"> 
                 <path
                   d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
@@ -308,298 +256,306 @@
                   d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
               </svg></a></li>
           </ul>
-        </div>
+        </div> 
+      </footer>
+    <div class="text-center mb-1 pb-1" id="privacy"><div> &copy; 2024 Veronica Simonte <a class="footer-link" href="#modal">Privacy Policy </a>
+    </div> 
+    
+    </section>
 
-
-      </div>
-      <div class="col-100 pb-2 text-center"> &copy; 2024 Veronica Simonte <a class="footer-link" href="#modal">Privacy Policy </a>
-        <br>
-      </div>
-
-
-
-
-    </footer>
-
-    <!-- Modal -->
+    <!-- Privacy Policy Modal -->
     <div class="modal-wrapper" id="modal">
       <div class="modal-body card">
         <div class="modal-header">
           <h2 class="heading">Privacy Policy</h2>
-          <a href="#!" role="button" class="close" aria-label="close this modal">
-            <svg viewBox="0 0 24 24">
-              <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-            </svg>
-          </a>
         </div>
         <p>Last updated: January 11, 2024</p>
-<p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-<p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.</p>
-<h2>Interpretation and Definitions</h2>
-<h3>Interpretation</h3>
-<p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
-<h3>Definitions</h3>
-<p>For the purposes of this Privacy Policy:</p>
-<ul>
-<li>
-<p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
-</li>
-<li>
-<p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
-</li>
-<li>
-<p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Portfolio Veronica Simonte.</p>
-</li>
-<li>
-<p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
-</li>
-<li>
-<p><strong>Country</strong> refers to: Italy</p>
-</li>
-<li>
-<p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
-</li>
-<li>
-<p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
-</li>
-<li>
-<p><strong>Service</strong> refers to the Website.</p>
-</li>
-<li>
-<p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
-</li>
-<li>
-<p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
-</li>
-<li>
-<p><strong>Website</strong> refers to Portfolio Veronica Simonte, accessible from <a href="https://veronicasimonte.github.io/portfolio/" rel="external nofollow noopener" target="_blank">https://veronicasimonte.github.io/portfolio/</a></p>
-</li>
-<li>
-<p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
-</li>
-</ul>
-<h2>Collecting and Using Your Personal Data</h2>
-<h3>Types of Data Collected</h3>
-<h4>Personal Data</h4>
-<p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-<ul>
-<li>
-<p>Email address</p>
-</li>
-<li>
-<p>First name and last name</p>
-</li>
-<li>
-<p>Usage Data</p>
-</li>
-</ul>
-<h4>Usage Data</h4>
-<p>Usage Data is collected automatically when using the Service.</p>
-<p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-<p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
-<p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
-<h4>Tracking Technologies and Cookies</h4>
-<p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
-<ul>
-<li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
-<li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
-</ul>
-<p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on <a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed website</a> article.</p>
-<p>We use both Session and Persistent Cookies for the purposes set out below:</p>
-<ul>
-<li>
-<p><strong>Necessary / Essential Cookies</strong></p>
-<p>Type: Session Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
-</li>
-<li>
-<p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
-<p>Type: Persistent Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
-</li>
-<li>
-<p><strong>Functionality Cookies</strong></p>
-<p>Type: Persistent Cookies</p>
-<p>Administered by: Us</p>
-<p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
-</li>
-</ul>
-<p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
-<h3>Use of Your Personal Data</h3>
-<p>The Company may use Personal Data for the following purposes:</p>
-<ul>
-<li>
-<p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
-</li>
-<li>
-<p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
-</li>
-<li>
-<p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
-</li>
-<li>
-<p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
-</li>
-<li>
-<p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p>
-</li>
-<li>
-<p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
-</li>
-<li>
-<p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
-</li>
-<li>
-<p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
-</li>
-</ul>
-<p>We may share Your personal information in the following situations:</p>
-<ul>
-<li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
-<li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
-<li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
-<li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
-<li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
-<li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
-</ul>
-<h3>Retention of Your Personal Data</h3>
-<p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
-<p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
-<h3>Transfer of Your Personal Data</h3>
-<p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
-<p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
-<p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
-<h3>Delete Your Personal Data</h3>
-<p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
-<p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
-<p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
-<p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
-<h3>Disclosure of Your Personal Data</h3>
-<h4>Business Transactions</h4>
-<p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
-<h4>Law enforcement</h4>
-<p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
-<h4>Other legal requirements</h4>
-<p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
-<ul>
-<li>Comply with a legal obligation</li>
-<li>Protect and defend the rights or property of the Company</li>
-<li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-<li>Protect the personal safety of Users of the Service or the public</li>
-<li>Protect against legal liability</li>
-</ul>
-<h3>Security of Your Personal Data</h3>
-<p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-<h2>Children's Privacy</h2>
-<p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
-<p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
-<h2>Links to Other Websites</h2>
-<p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
-<p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
-<h2>Changes to this Privacy Policy</h2>
-<p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
-<p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>
-<p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-<h2>Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, You can contact us:</p>
-<ul>
-<li>By visiting this page on our website: <a href="https://veronicasimonte.github.io/portfolio/" rel="external nofollow noopener" target="_blank">https://veronicasimonte.github.io/portfolio/</a></li>
-</ul>
-
-
+        <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
+        <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a>.</p>
+        <h2>Interpretation and Definitions</h2>
+        <h3>Interpretation</h3>
+        <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+        <h3>Definitions</h3>
+        <p>For the purposes of this Privacy Policy:</p>
+        <ul>
+        <li>
+        <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
+        </li>
+        <li>
+        <p><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
+        </li>
+        <li>
+        <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to Portfolio Veronica Simonte.</p>
+        </li>
+        <li>
+        <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</p>
+        </li>
+        <li>
+        <p><strong>Country</strong> refers to: Italy</p>
+        </li>
+        <li>
+        <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</p>
+        </li>
+        <li>
+        <p><strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.</p>
+        </li>
+        <li>
+        <p><strong>Service</strong> refers to the Website.</p>
+        </li>
+        <li>
+        <p><strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</p>
+        </li>
+        <li>
+        <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</p>
+        </li>
+        <li>
+        <p><strong>Website</strong> refers to Portfolio Veronica Simonte, accessible from <a href="https://veronicasimonte.github.io/portfolio/" rel="external nofollow noopener" target="_blank">https://veronicasimonte.github.io/portfolio/</a></p>
+        </li>
+        <li>
+        <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+        </li>
+        </ul>
+        <h2>Collecting and Using Your Personal Data</h2>
+        <h3>Types of Data Collected</h3>
+        <h4>Personal Data</h4>
+        <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
+        <ul>
+        <li>
+        <p>Email address</p>
+        </li>
+        <li>
+        <p>First name and last name</p>
+        </li>
+        <li>
+        <p>Usage Data</p>
+        </li>
+        </ul>
+        <h4>Usage Data</h4>
+        <p>Usage Data is collected automatically when using the Service.</p>
+        <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+        <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+        <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
+        <h4>Tracking Technologies and Cookies</h4>
+        <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:</p>
+        <ul>
+        <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
+        <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
+        </ul>
+        <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on <a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank">TermsFeed website</a> article.</p>
+        <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
+        <ul>
+        <li>
+        <p><strong>Necessary / Essential Cookies</strong></p>
+        <p>Type: Session Cookies</p>
+        <p>Administered by: Us</p>
+        <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
+        </li>
+        <li>
+        <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
+        <p>Type: Persistent Cookies</p>
+        <p>Administered by: Us</p>
+        <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
+        </li>
+        <li>
+        <p><strong>Functionality Cookies</strong></p>
+        <p>Type: Persistent Cookies</p>
+        <p>Administered by: Us</p>
+        <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
+        </li>
+        </ul>
+        <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+        <h3>Use of Your Personal Data</h3>
+        <p>The Company may use Personal Data for the following purposes:</p>
+        <ul>
+        <li>
+        <p><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</p>
+        </li>
+        <li>
+        <p><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.</p>
+        </li>
+        <li>
+        <p><strong>For the performance of a contract:</strong> the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.</p>
+        </li>
+        <li>
+        <p><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</p>
+        </li>
+        <li>
+        <p><strong>To provide You</strong> with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.</p>
+        </li>
+        <li>
+        <p><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</p>
+        </li>
+        <li>
+        <p><strong>For business transfers:</strong> We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.</p>
+        </li>
+        <li>
+        <p><strong>For other purposes</strong>: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.</p>
+        </li>
+        </ul>
+        <p>We may share Your personal information in the following situations:</p>
+        <ul>
+        <li><strong>With Service Providers:</strong> We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.</li>
+        <li><strong>For business transfers:</strong> We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.</li>
+        <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.</li>
+        <li><strong>With business partners:</strong> We may share Your information with Our business partners to offer You certain products, services or promotions.</li>
+        <li><strong>With other users:</strong> when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.</li>
+        <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
+        </ul>
+        <h3>Retention of Your Personal Data</h3>
+        <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+        <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.</p>
+        <h3>Transfer of Your Personal Data</h3>
+        <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
+        <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
+        <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.</p>
+        <h3>Delete Your Personal Data</h3>
+        <p>You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.</p>
+        <p>Our Service may give You the ability to delete certain information about You from within the Service.</p>
+        <p>You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.</p>
+        <p>Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+        <h3>Disclosure of Your Personal Data</h3>
+        <h4>Business Transactions</h4>
+        <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+        <h4>Law enforcement</h4>
+        <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+        <h4>Other legal requirements</h4>
+        <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+        <ul>
+        <li>Comply with a legal obligation</li>
+        <li>Protect and defend the rights or property of the Company</li>
+        <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+        <li>Protect the personal safety of Users of the Service or the public</li>
+        <li>Protect against legal liability</li>
+        </ul>
+        <h3>Security of Your Personal Data</h3>
+        <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+        <h2>Children's Privacy</h2>
+        <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
+        <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+        <h2>Links to Other Websites</h2>
+        <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
+        <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+        <h2>Changes to this Privacy Policy</h2>
+        <p>We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
+        <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy Policy.</p>
+        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+        <ul>
+        <li>By visiting this page on our website: <a href="https://veronicasimonte.github.io/portfolio/" rel="external nofollow noopener" target="_blank">https://veronicasimonte.github.io/portfolio/</a></li>
+        </ul>
       </div>
       <a href="#!" class="outside-trigger"></a>
     </div>
-
     <!--Animazione works-->
     <script>
-      const nav = document.getElementById("nav");
+        const nav = document.getElementById("nav");
 
-      for (const link of nav.getElementsByTagName("a")) {
-        link.onmousemove = (e) => {
-          const rect = link.getBoundingClientRect(),
-            img = link.querySelector("img");
+        for (const link of nav.getElementsByTagName("a")) {
+          link.onmousemove = (e) => {
+            const rect = link.getBoundingClientRect(),
+              img = link.querySelector("img");
 
-          //     img.style.left = `${e.clientX - rect.left}px`;
-          //     img.style.top = `${e.clientY - rect.top}px`;
+            //     img.style.left = `${e.clientX - rect.left}px`;
+            //     img.style.top = `${e.clientY - rect.top}px`;
+          };
+        }
+
+        window.onmousemove = (e) => {
+          const percent = e.clientX / window.innerWidth;
+
+          nav.animate(
+            {
+              transform: `translateX(${percent * nav.offsetWidth * -1}px)`,
+            },
+            {
+              fill: "forwards",
+              duration: 4000,
+            }
+          );
         };
-      }
-
-      window.onmousemove = (e) => {
-        const percent = e.clientX / window.innerWidth;
-
-        nav.animate(
-          {
-            transform: `translateX(${percent * nav.offsetWidth * -1}px)`,
-          },
-          {
-            fill: "forwards",
-            duration: 4000,
-          }
-        );
-      };
     </script>
 
-
-    <script>$("#myHref").on('click', function () {
-        alert("blblblblblblblblllbblbllblblbbllblblb");
-        window.location = "http://www.google.com";
-      });
+    <!--script import-->
+    <script src="app.js"></script>
+    <!--Form javascript functions-->
+    <script type="text/javascript">
+      emailjs.init('xEQ_zjSROoPyJqBG8') // PUBLIC KEY
     </script>
+    <script>
+      const btn = document.getElementById('button');
 
-  <script src="app.js"></script>
-  <script type="text/javascript">
-    emailjs.init('xEQ_zjSROoPyJqBG8') // PUBLIC KEY
-  </script>
+      document.getElementById('form')
+          .addEventListener('submit', function (event) {
+              event.preventDefault();
 
-  <script>
-    const btn = document.getElementById('button');
+              btn.value = 'Sending...';
 
-    document.getElementById('form')
-        .addEventListener('submit', function (event) {
-            event.preventDefault();
+              const serviceID = 'service_glrasvh'; // SERVICE_ID
+              const templateID = 'contact_form'; // TEMPLATE_ID
 
-            btn.value = 'Sending...';
-
-            const serviceID = 'service_glrasvh'; // SERVICE_ID
-            const templateID = 'contact_form'; // TEMPLATE_ID
-
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    btn.value = 'Send Email';
-                    alert('Sent!');
-                }, (err) => {
-                    btn.value = 'Send Email';
-                    alert(JSON.stringify(err));
-                });
-        });
-  </script>
-  <script> 
-      let item = document.querySelector('.icon-hamburger');
-      item.addEventListener("click", function() {
-        document.body.classList.toggle('menu-open');
-      });
-
-
-    let items = document.querySelectorAll('.header__menu a');
-    items.forEach((item) => {
-      item.addEventListener("click", function() {
-          //remove 
-          items.forEach((item) => {
-            item.classList.remove('underline');
+              emailjs.sendForm(serviceID, templateID, this)
+                  .then(() => {
+                      btn.value = 'Send Email';
+                      alert('Sent!');
+                  }, (err) => {
+                      btn.value = 'Send Email';
+                      alert(JSON.stringify(err));
+                  });
           });
-          //add
-          item.classList.add('underline');
-
-          // close menu mobile
-          document.body.classList.remove('menu-open');
-      });
-    });
-
-    //animazione menu
-    
     </script>
+    <!--Menu hamburger-->
+    <script> 
+        let item = document.querySelector('.icon-hamburger');
+        item.addEventListener("click", function() {
+          document.body.classList.toggle('menu-open');
+        });
+
+
+      let items = document.querySelectorAll('.header__menu a');
+      items.forEach((item) => {
+        item.addEventListener("click", function() {
+            //remove 
+            items.forEach((item) => {
+              item.classList.remove('underline');
+            });
+            //add
+            item.classList.add('underline');
+
+            // close menu mobile
+            document.body.classList.remove('menu-open');
+        });
+      });    
+    </script>
+    <!--Menu sections link-->
+    <script>
+      // Get all sections that have an ID defined
+      const sections = document.querySelectorAll("section[id]");
+      // Add an event listener listening for scroll
+      window.addEventListener("scroll", navHighlighter);
+      function navHighlighter() {
+    // Get current scroll position
+    let scrollY = window.pageYOffset;      
+    // Now we loop through sections to get height, top, and ID values for each
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 300;
+      const sectionId = current.getAttribute("id"); // Corrected here
+      /*
+      - If our current scroll position enters the space where the current section on screen is, add .active class to the corresponding navigation link, else remove it
+      - To know which link needs an active class, we use the sectionId variable we are getting while looping through sections as a selector
+      */
+      if (
+        scrollY > sectionTop &&
+        scrollY <= sectionTop + sectionHeight
+      ){
+        document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
+      } else {
+        document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+      }
+    });
+  }
+    </script>
+  </div>
 </body>
 </html>

@@ -58,6 +58,7 @@ ol,ul{
 li {list-style: none;}
 ul {list-style-type:none;}
 
+
 button {
   background: none;
   color: inherit;
@@ -130,6 +131,7 @@ nav {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: row;
+  height: 60vh;
 }
 
 nav > a {
@@ -239,9 +241,19 @@ margin: 0;
 .header__menu li{
 display: inline-block; /*visualizzazone in row*/
 }
-.header__menu li.underline a {
+
+/*
+.header__menu li.active a {
   text-decoration: line-through;
 }
+*/
+.active {
+  text-decoration: line-through;
+  text-decoration-color: #2d89fa;
+  text-decoration-thickness: 0.2rem;
+}
+
+
 .header__menu li a{
 color:var(--secondary-color);
 opacity: 1;
@@ -255,11 +267,6 @@ font-size: 1.3em;
   text-decoration-color: #2d89fa;
   text-decoration-thickness: 0.2rem;
  }
-
-.header__menu a.underline{
-  text-decoration: line-through;
-}
-
 
 canvas {
 position: fixed;
@@ -336,7 +343,7 @@ user-select: none;
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
-.img-res { width: 65%; height: auto; margin-bottom: 20px;vertical-align: middle;}
+.img-res {width: 65%; height: auto; margin-bottom: 20px;vertical-align: middle;}
 
 
 
@@ -442,8 +449,8 @@ input[type=text], select, textarea {     /*stile form*/
   border: 0;
 }
 #icons {
-  margin-left: 30px;
-}  
+  display: flex;justify-content: flex-end;
+  }  
 .containerpopup{
   width: 100%;
   height: 100vh;
@@ -550,7 +557,7 @@ input[type=text], select, textarea {     /*stile form*/
 .field label {
   display: block;
   font-size: 12px;
-  color: #777;
+  color: var(--secondary-color);
 }
 
 .field input {
@@ -592,7 +599,7 @@ input[type="submit"] {
   .slider {
   background: var(--menu-bg);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
+  height: 50vh;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -623,8 +630,7 @@ input[type="submit"] {
   width: calc(250px * 14);
   }
   .slider .slide {
-  height: 100px;
-  width: 250px;
+  width: 100px;
   align-items: center;
   }
 
@@ -642,26 +648,40 @@ input[type="submit"] {
   }
 
   @media (max-width: 768px) {
-     .header__quick{display: flex; 
-      justify-content: flex-end; 
-      width: 50%;}
-      .icon-hamburger{
-        height: 50px;
-        width: 40px;
-        margin-left: 20px;
-        padding-top: 5px;}
-      .icon-hamburger span{
-    height: 2px; 
-    width: 30px;
-    background: var(White);
-    position: relative;
-    display: block;
-    margin-top: 11px;
-    transition: all 0.2s cubic-bezier(.215, .61, .355, 1);}
+    nav {
+      overflow-x: scroll;
+    }
+    .img-res {
+      display: none;
+    }
+
+
+
+    .header__menu{   
+      position: absolute; top:70px; right:0; background-color: var(--menu-bg); width: 90%; height: 100vh;  
+      overflow: hidden;transition: all 1s cubic-bezier(.215, .61, .355, 1); transform: translateX(101%); 
+      border-left: 1px solid #999; border-top: 1px solid #999;
+    }
   
-      .menu-open .icon-hamburger span:nth-child(1){transform: rotate(45deg) translateY(9px);}
-      .menu-open .icon-hamburger span:nth-child(2){transform: rotate(-45deg) translateY(-9px);}
+    .header__menu li{width: 100%;border-bottom: 1px solid #999}
+    .menu-open .header__menu{transform: translateX(0%);}
+  
+    .icon-hamburger{height: 50px;width: 40px;margin-left: 20px;padding-top: 5px;}
+    .icon-hamburger span{height: 2px; width: 30px;background: var(--secondary-color);position: relative;display: block;margin-top: 11px;transition: all 0.2s cubic-bezier(.215, .61, .355, 1);}
+    
+    .menu-open .icon-hamburger span:nth-child(1){transform: rotate(45deg) translateY(9px);}
+    .menu-open .icon-hamburger span:nth-child(2){transform: rotate(-45deg) translateY(-9px);}
+  
+    .header__quick{display: flex; justify-content: flex-end; width: 50%;}
   }
+
+  #privacy {
+    background-color: #2d89fa;
+  }
+  #privacy a:visited {
+    color: var(--secondary-color); 
+  }
+
 
   /*modal*/
   .modal {
@@ -672,7 +692,7 @@ input[type="submit"] {
     right: 0;
     bottom: 0;
     transition: all 0.3 ease-in-out;
-
+    scroll-behavior: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -721,12 +741,10 @@ input[type="submit"] {
       width: 16px;
     }
   }
-  
+
   .modal-wrapper {
-    overflow: hidden;
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
-    bottom: 0;
     display: flex;
     justify-content: center;
     left: 0;
@@ -736,6 +754,7 @@ input[type="submit"] {
   }
   
   #modal {
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
   
@@ -752,6 +771,7 @@ input[type="submit"] {
   
     .modal-body {
       max-width: 500px;
+      height: 100vh;
       opacity: 0;
       transform: translateY(-100px);
       width: 100%;

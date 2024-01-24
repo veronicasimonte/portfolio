@@ -129,3 +129,24 @@ function animate(){
 }
 
 animate()
+
+document.addEventListener('DOMContentLoaded', function() {
+    const titleText = "I might be your trustworthy UI/UX designer"; // Cambia con il tuo titolo
+    const typingTitle = document.getElementById('typing-title');
+    const cursor = document.getElementById('cursor');
+  
+    function typeWriter(text, i) {
+      if (i < text.length) {
+        typingTitle.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(function() {
+          typeWriter(text, i);
+        }, 120); // Regola la velocità di scrittura
+      } else {
+        cursor.style.display = 'none'; // Nascondi il cursore alla fine della scrittura
+      }
+    }
+  
+    typeWriter(titleText, 0);
+  });
+  

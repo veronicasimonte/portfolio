@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8">
@@ -31,25 +31,25 @@
           <li><a href="#about">About</a></li>
           <li><a href="#work">Works</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li id="english"><a href="">EN 🇬🇧</a></li>
-          <li id="italiano"><a href="./index_it.html">IT 🇮🇹</a></li>
+          <li id="english"><a href="./index.html">EN 🇬🇧</a></li>
+          <li id="italiano"><a href="">IT 🇮🇹</a></li>
           <li id="espanol"><a href="./index_es.html">ES 🇪🇸</a></li>
         </ul>
         <!--Lang Dropdown-->
         <div class="custom-select">
           <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox"
             aria-expanded="false" aria-controls="select-dropdown">
-            <span class="selected-value">English</span>
+            <span class="selected-value">Italiano</span>
             <span class="arrow"></span>
           </button>
           <ul class="select-dropdown" role="listbox" id="select-dropdown">
             <li role="option">
               <input type="radio" id="italiano" name="language" />
-              <label for="italiano"><a href="./index_it.html">Italiano</a></label>
+              <label for="italiano"><a href="">Italiano</a></label>
             </li>
             <li role="option">
               <input type="radio" id="english" name="language" />
-              <label for="english"><a href="">English</a></label>
+              <label for="english"><a href="./index.html">English</a></label>
             </li>
             <li role="option">
               <input type="radio" id="espanol" name="language" />
@@ -68,7 +68,7 @@
     <!--Home-->
     <div class="grid hero" id="home" data-section="home">
       <div class="col-100 pt-5 text-center">
-        <h1>I might be your trustworthy UI/UX designer</h1>
+        <h1>Italiano I might be your trustworthy UI/UX designer</h1>
         <br>
         <h4>Hi, I'm Veronica Simonte</h4>
       </div>
@@ -80,19 +80,19 @@
         <h4>
           Creo esperienze digitali coinvolgenti, unendo arte e funzionalità. Navigo il design con occhi attenti, trasformando idee in interfacce sorprendenti. Sono un innovatore empatico, capace di comprendere le esigenze degli utenti e trasformare la visione in soluzioni digitali intuitive.</h4></button>
         <a href="mailto: veronicasimonte@gmail.com" class="button">Let's talk</a>
-      </div>
-      <div class="col-50 p-3 relative" >
+      </div>      
+      <div class="col-50 p-3 relative" id="certifications">
         <img src="loghi cert.png" class="img-res img-small" height="100" width="100" alt=""> 
       </div>      
     </section>
-
-
-    
+    <div class="hero2 col-100"><a href=""></a></div>
 
     <h2 class="col-100 text-center mb-4">Skills</h2>
-
     <!--Skills & Works-->
+    <h2 class="text-center mb-4">Skills</h2>
     <section class="slider" id="work">
+      <div class="col-100">
+      </div>
       <div class="slide-track">
         <div class="slide">
         <img src="figma skills 3.png" height="50" width="50" alt="" />
@@ -189,7 +189,7 @@
       <div class="text-center mt-4 ">
         <nav id="nav">    
           <!--Work 3-->
-          <a href="#">
+          <a>
             <span data-img="1">ORGASMIC</span>
             <div class="img-wrapper">
               <img
@@ -240,14 +240,14 @@
       </div>
     </section>
 
-    
+    <div class="hero2"><a href=""></a></div>
 
     <!--Footer-->
     <section id="contact">
       <footer class="footer grid p-3">
         <section class="col-50" id="contactsection"> 
           <h3>VERONICA SIMONTE</h3>
-          <p>Veronica Simonte is a UX/UI designer based in Italy. <br>For any inquiries, you can write here.</p>
+          <p>Veronica Simonte is a UX/UI designer based in Italy. <br>For any inquiries, you can write here ...</p>
           <!--contact form-->
           <form id="form">
             <div class="field">
@@ -263,7 +263,7 @@
               <input type="text" name="user_email" id="user_email" required>
             </div>
             <div class="field">
-              <label for="contact_number" type="number">contact number</label>
+              <label for="contact_number">contact number</label>
               <input type="text" name="contact_number" id="contact_number" required>
             </div>        
             <input class="button-34"  type="submit" id="button" value="Send Email">
@@ -478,8 +478,6 @@
       </div>
       <a href="#!" class="outside-trigger"></a>
     </div>
-
-
     <!--Animazione works-->
     <script>
         const nav = document.getElementById("nav");
@@ -626,6 +624,9 @@
       });
 
     </script>
+
+
+
   </div>
 </body>
 </html>

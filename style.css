@@ -260,8 +260,7 @@ display: inline-block; /*visualizzazone in row*/
 color:var(--secondary-color);
 opacity: 1;
 display: block;
-padding: 0.001vh;  /*padding elementi header da modificare*/
-margin-left: 8vh;
+padding: 0.9rem;  /*padding elementi header da modificare*/
 font-size: 1.3rem;
 }
 .header__menu li a:hover {

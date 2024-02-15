@@ -227,7 +227,6 @@ padding: 3vh 3vw;
 width: 100%;
 margin: 0 auto; 
 display: flex;
-justify-content: space-between;
 }
 
 .header__logo{
@@ -238,7 +237,7 @@ font-size: 1.3rem;
 }
 .header__menu{
 padding: 0;
-margin: 0;
+margin-left: 30em;
 }
 .header__menu li{
 display: inline-block; /*visualizzazone in row*/
@@ -699,6 +698,10 @@ input[type="submit"] {
   }
 
   @media (max-width: 768px) {
+
+    canvas{
+      visibility: hidden;
+    }
 
     h1{
       font-size: 2rem;

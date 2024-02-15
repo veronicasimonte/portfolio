@@ -699,6 +699,10 @@ input[type="submit"] {
 
   @media (max-width: 768px) {
 
+    #sbarrato {
+      visibility: hidden;
+    }
+
     canvas{
       visibility: hidden;
     }

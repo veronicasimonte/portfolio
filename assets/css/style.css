@@ -1,50 +1,33 @@
-/* 
-display: grid e display: flex sono entrambi proprietÃ  che si possono dare al layout della pagina, ma esse usano un approccio diverso
+/* ---- url ---- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-Le differenze tra di loro:
-
-    Modello di Layout:
-        Flexbox (display: flex): Ãˆ un sistema di layout unidimensionale, il che significa che gestisce gli elementi in una riga o in una colonna. Ãˆ adatto per disporre gli elementi lungo un solo asse, orizzontalmente o verticalmente.
-        Grid (display: grid): Ãˆ un sistema di layout bidimensionale, che consente di creare layout con sia righe che colonne. Ãˆ piÃ¹ versatile per la creazione di layout complessi basati su griglie.
-
-    Orientamento:
-        Flexbox: Utilizzato principalmente per creare layout in una singola dimensione, sia come riga che come colonna.
-        Grid: Consente sia righe che colonne, fornendo un layout bidimensionale.
-
-    **Differenza principale** Allineamento degli Elementi Figli:
-        Flexbox: Tratta l'allineamento degli elementi lungo l'asse principale (per righe o colonne).
-        Grid: Consente l'allineamento sia nella direzione delle righe che delle colonne in modo indipendente.
-
-    Ordinamento:
-        Flexbox: La proprietÃ  order consente di controllare l'ordine in cui gli elementi flessibili appaiono nel contenitore flessibile.
-        Grid: La proprietÃ  order non viene utilizzata nei layout della griglia. Invece, Ã¨ possibile controllare l'ordine utilizzando la proprietÃ  grid-template-areas o posizionando gli elementi in linee di griglia specifiche.
-
-    Comportamento Predefinito:
-        Flexbox: Gli elementi in un contenitore flessibile cercheranno, per impostazione predefinita, di adattarsi a una singola riga.
-        Grid: Gli elementi in un contenitore della griglia cercheranno, per impostazione predefinita, di riempire lo spazio disponibile sia nelle righe che nelle colonne.
-
-    Casi d'Uso:
-        Flexbox: Ideale per disporre gli elementi in una singola riga o colonna, come menu di navigazione, barre degli strumenti o elementi all'interno di un contenitore flessibile.
-        Grid: Adatto per creare layout complessi con righe e colonne, come layout di intere pagine o componenti con design strutturati basati su griglie.
-
-    Annidamento:
-        Flexbox: Ãˆ possibile annidare contenitori flessibili l'uno dentro l'altro.
-        Grid: Ãˆ possibile annidare contenitori della griglia l'uno dentro l'altro, consentendo layout piÃ¹ intricati e modulari.
-
-In molti casi, queste tecniche di layout non sono mutualmente esclusive e possono essere utilizzate insieme per ottenere design piÃ¹ complessi. Spesso, Flexbox viene utilizzato all'interno degli elementi della griglia o in combinazione con layout della griglia per gestire esigenze di layout su piccola scala all'interno di design piÃ¹ ampi e strutturati basati su griglie.
-*/
-
-/* In questo foglio di stile attuo un mobile first approach => smartphone, tablets, larger screens */
-
-/* ---- variabili ---- */
+/* ---- root ---- */
 :root{
   --menu-bg: #000; 
   --header-color: #333;
   --secondary-color: whitesmoke;
 }
 
-/* ---- reset ---- */
-/* em Ã¨ una unitÃ  scalabile, al contrario dei pixel (fixed). Questo significa che prende la misura default e la moltiplica per il numero che scelgo (es: 4em = 4xmisura di base) ---- */
+.navbar .nav-link, 
+.navbar .dropdown-item {
+  --secondary-color: whitesmoke !important; /* Cambia il colore del testo */ }
+
+  .navbar-dark {
+    background-color: black !important;
+    text /* Set the background color to black */
+  }  
+
+  /* Custom CSS for dropdown menu */
+  .navbar-dark .dropdown-menu {
+    background-color: black; /* Set the background color to black */
+  }
+  
+  /* Custom CSS for dropdown items */
+  .navbar-dark .dropdown-menu .dropdown-item {
+    color: white; /* Set the text color to white */
+  }
+
+/* ---- elementi ---- */
 h1,h2,h3,h4,h5,h6, p, ol, ul{
   margin: 0 0 1rem 0;
   padding: 0;
@@ -58,7 +41,6 @@ ol,ul{
 li {list-style: none;}
 ul {list-style-type:none;}
 
-
 button {
   background: none;
   color: inherit;
@@ -68,6 +50,7 @@ button {
   cursor: pointer;
   outline: inherit;
 }
+
 img{
   height: auto;
 }
@@ -91,10 +74,12 @@ h4{
 
 h5{
   font-size: 0.8rem;
-} 
+}
+
 h6{
   font-size: 0.6rem;
 }
+
 a{
   text-decoration:none;
   margin: 0.2em;
@@ -113,6 +98,7 @@ body, html{
   box-sizing: border-box; 
 }
 
+
 /* ---- stili di base ----- */
 html{
   scroll-behavior: smooth;
@@ -125,17 +111,17 @@ body{
   font-family: 'Montserrat';
 }
 
-nav {
+nav .work {
   position: relative;
-  top: 40%;
+  top: 10%;
   left: 67%;  /* per decentrare */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   display: flex;
   flex-direction: row;
   height: 60vh;
 }
 
-nav > a {
+nav .work > a {
   color: rgb(184, 184, 184);
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -147,17 +133,17 @@ nav > a {
   text-align: center;
 }
 
-nav > a:hover {
+nav .work> a:hover {
   color: #fff;
 }
 
-nav > a > span {
+nav .work > a > span {
   position: relative;
   z-index: 2;
-  width: 400px;
+  width: 400em;
 }
 
-nav a .img-wrapper {
+nav .work a .img-wrapper {
   position: absolute;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.5);
@@ -168,7 +154,7 @@ nav a .img-wrapper {
   overflow: hidden;
 }
 
-nav a img {
+nav .work a img {
   position: absolute;
   opacity: 0;
   top: 0;
@@ -182,12 +168,12 @@ nav a img {
   object-fit: contain;
 }
 
-nav a:hover .img-wrapper {
+nav .work a:hover .img-wrapper {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-nav a:hover img {
+nav .work a:hover img {
   opacity: 1;
   transform: scale(1.5);
 }
@@ -195,53 +181,56 @@ nav a:hover img {
 /* ---- fonts ----- */
 @font-face {
   font-family: 'Montserrat'; /* ---- qui posso chiamarlo anche 'font di Veronica' ----- */
-  src: url('fonts/Montserrat-VariableFont_wght.ttf');
+  src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf');
 }
-
-
 
 /* ---- ! Sistema di titoli ---- */
-h1, .text-1 {font-size: 3.6rem;margin-bottom:1rem}
-h2, .text-1 {font-size: 3.06rem;}
-h2, .text-2 {font-size: 2.2rem;margin-bottom:1rem;line-height: 1;}
-h3, .text-3  {font-size: 1.8rem;margin-bottom:1rem;line-height: 1.2;}
-h4, .text-4 {font-size: 1.5rem;margin-bottom:1rem;line-height: 1.2;}
-p{font-size: 1rem;margin-bottom:1rem; line-height: 1.5;}
-.text-center{text-align: center;}
-
-
-
-/*>>>>>>>>>>>><< Continua qui */
-
-.header{ 
-background-color: var(--menu-bg); 
-color: var(--header-color);
-position: fixed; 
-top:0;  /* non c'Ã¨ bisogno che scriva 'margin-top' perchÃ¨ la posizione Ã¨ fixed*/
-left:0; 
-z-index: 9999; 
-width: 100%; 
-padding: 3vh 3vw; 
-}
-.header__content{
-width: 100%;
-margin: 0 auto; 
-display: flex;
+h1, .text-1 {
+  font-size: 3.6rem;margin-bottom:1rem;
 }
 
-.header__logo{
-display: flex; 
-align-items: center;
-color:var(--secondary-color);
-font-size: 1.3rem;
+h2, .text-1 {
+  font-size: 3.06rem;
 }
-.header__menu{
-padding: 0;
-margin-left: 30em;
+
+h2, .text-2 {
+  font-size: 2.2rem;margin-bottom:1rem;line-height: 1;
 }
-.header__menu li{
-display: inline-block; /*visualizzazone in row*/
+
+h3, .text-3  {
+  font-size: 1.8rem;margin-bottom:1rem;line-height: 1.2;
 }
+
+h4, .text-4 {
+  font-size: 1.5rem;margin-bottom:1rem;line-height: 1.2;
+}
+
+p{
+  font-size: 1rem;margin-bottom:1rem; line-height: 1.5;
+}
+
+.text-center{
+  text-align: center;
+}
+
+#nudge {
+  visibility: hidden;
+}
+
+/*>>>>>>>>>>>><< Header */
+
+.header{ background-color: var(--menu-bg); position: fixed; top:0;  left:0; z-index: 9999; width: 100%; padding: 10px 15px; }
+.header__content{max-width: 90rem;width: 100%;margin: 0 auto; display: flex;justify-content: space-between;}
+
+
+.header__logo{display: flex; align-items: center;color:var(--menu-color)}
+
+
+.header__menu{padding: 0;margin: 0;}
+.header__menu li{display: inline-block;}
+.header__menu li a{color:var(--menu-color); opacity: 1;display: block;padding: 16px;font-size: 15px;}
+
+
 
 /*
 .header__menu li.active a {
@@ -255,18 +244,7 @@ display: inline-block; /*visualizzazone in row*/
 }
 
 
-.header__menu li a{
-color:var(--secondary-color);
-opacity: 1;
-display: block;
-padding: 0.9rem;  /*padding elementi header da modificare*/
-font-size: 1.3rem;
-}
-.header__menu li a:hover {
-  text-decoration: line-through;
-  text-decoration-color: #2d89fa;
-  text-decoration-thickness: 0.2rem;
- }
+
 
 canvas {
 position: fixed;
@@ -297,7 +275,9 @@ user-select: none;
 .grid--center{justify-content: center;}
 .col{ flex: 1;}
 
-[class*='col-'] { position: relative;padding: 0 1vw;}
+[class*='col-'] { 
+  position: relative;
+  padding: 0 1vw;}
 
 .col-20{ width: 20%; }
 .col-25{ width: 25%; }
@@ -384,14 +364,11 @@ background-position: center center; background-size:cover;
   background-image: url("https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 } */
 
-#sbarrato {
-  text-align: left;
-}
+
 #sbarrato:hover {
   text-decoration: line-through;
   text-decoration-color: #2d89fa;
   text-decoration-thickness: 0.2rem;
-
 }
 /* Footer */
 .footer{background-color: #2d89fa;color:#fff}
@@ -401,19 +378,13 @@ background-position: center center; background-size:cover;
 /* ! Button System */
 .button { 
 font-size: 1rem; text-transform: uppercase; background:#2d89fa; color:#fff; 
-text-decoration: none;padding: 14px 25px; display: inline-block;
-border-radius: 14px; font-weight: 700;
+text-decoration: none;padding: 0.8em; display: inline-block;
+border-radius: 0.7em; font-weight: 700;
 }  
 
 .button:hover{
 background: #333; 
 }
-
-.button-small { 
-font-size: 1rem; text-transform: uppercase; background: #EF6362; color:#fff; 
-text-decoration: none;padding: 10px 20px; display: inline-block;
-border-radius: 4px; font-weight: 700;
-} 
 
 footer a {
   text-decoration: none;
@@ -424,10 +395,21 @@ button .select-button {
   margin: 0;
   height: auto;
 }
+.custom-select{
+  display: flex;
+  all: unset;
+}
 
+.custom-select a {
+  margin-top: 10%;
+
+}
 .custom-select ul li label a {
-  text-decoration: none;
+  all: unset;
   color: var(--menu-color);
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 input[type=text], select, textarea {     /*stile form*/
@@ -467,12 +449,11 @@ input[type=text], select, textarea {     /*stile form*/
 }
 
 #contactsection {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 #form {
   text-transform:uppercase;
-  max-width: 75%;
 }
 
 #icons {
@@ -624,44 +605,11 @@ input[type="submit"] {
   transform: translateX(calc(-250px * 7));
   }
   }
-  .slider {
-  background: var(--menu-bg);
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 50vh;
-  margin: auto;
-  margin-bottom: 0%;
-  padding-bottom:0%;
-  overflow: hidden;
-  position: relative;
-  width: 960px;
-  }
 
-  .slider::before, .slider::after {
-  background: linear-gradient(to right, var(--menu-bg) 0%, rgba(255, 255, 255, 0) 100%);
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 999;
-  }
-  .slider::after {
-  right: 0;
-  top: 0;
-  -webkit-transform: rotateZ(180deg);
-  transform: rotateZ(180deg);
-  }
-  .slider::before {
-  left: 0;
-  top: 0;
-  }
   .slider .slide-track {
   -webkit-animation: scroll 40s linear infinite;
   animation: scroll 40s linear infinite;
-  display: flex;
   width: calc(250px * 14);
-  }
-  .slider .slide {
-  width: 100px;
-  align-items: center;
   }
 
   .hero2 {
@@ -693,18 +641,36 @@ input[type="submit"] {
     height: 15em;
   }
 
-  #work h2 {
-    margin-bottom: 2.3em;
-  }
+  @media (max-width: 767px) {
+    body, html {
+      box-sizing: border-box;
+      padding: 0;
+    }
 
-  @media (max-width: 768px) {
 
-    #sbarrato {
+    .header__content{max-width: 22rem;width: 100%;margin: 0 auto; display: flex;justify-content: space-between;}
+
+    .button { 
+      font-size: 0.9rem;
+    margin-top: 1.4em;}
+
+    #sbarrato:hover {
       text-decoration: none;
+    }
+    #sbarrato:active {
+      text-decoration: none;
+    }
+
+    #nudge {
+      visibility: visible;
     }
 
     canvas{
       visibility: hidden;
+    }
+
+    #nonNudge {
+      display: none;
     }
 
     h1{
@@ -938,7 +904,7 @@ input[type="submit"] {
     border-color:#000 !important;
     color: white !important;
     width: 100%;
-    font-size: 1.15rem;
+    font-size: 1rem;
     background-color: #fff;
     padding: 0.675em 1em;
     border: 1px solid #caced1;
@@ -954,6 +920,11 @@ input[type="submit"] {
     text-align: left;
   }
   
+  .black {
+    background-color: black !important; 
+  }
+
+
   .arrow {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
@@ -1057,3 +1028,60 @@ input[type="submit"] {
     background-color: #000;
   }
   
+
+
+  /* carousel */
+  
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+/*slide skills*/
+
+
+.slider {
+	background: black;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 2.5%;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 60%;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 1em;
+		position: absolute;
+		width: 1em;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	.slide {
+		width: 50%;
+	}
+}

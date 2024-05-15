@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="It">
 
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Veronica Simonte">
-  <meta name="description" content="Questo è il portfolio di Veronica Simonte. Assumi Veronica per lavori di UX/UI design.">
+  <meta name="description" content="This is Veronica Simonte's portfolio. Hire her for UX/UI services.">
+  <meta name="keywords" content="UX, UI, Veronica Simonte, Designer, UX/UI Services">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="UX, UI, Veronica Simonte, Designer, Servizi UX/UI">
   <meta http-equiv="X-UA-Compatiile" content="ie=edge">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <title>Veronica Simonte Portfolio</title>
-  
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" alt="cloudflare" target="_blank" />
   <link rel="stylesheet" href="assets/css/style.css" alt="css stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
+ 
   <meta property='og:title' content='Veronica Simonte Portfolio'/>
   <meta property='og:url' content='https://veronicasimonte.github.io/portfolio/'/>
   <meta property='og:type' content='Portfolio website' />
@@ -29,50 +34,46 @@
   <canvas></canvas> <!--inizializzo il canvas che mi servirà per l'immagine profilo a comparsa-->  
   <div class="overflow-h"> <!--Div principale-->
     <!--Header-->
-    <header class="header"> 
-
-      <div class="header__content">
-        <a class="header__logo" href="#home" alt="home">
-          <strong>VS</strong>
-        </a>
-        <ul class="header__menu">
-          <li><a href="#about" alt="about">About</a></li>
-          <li><a href="#work" alt="works">Works</a></li>
-          <li><a href="#contact" alt="contact">Contact</a></li>
-          <li id="english"><a href="./index.html">EN 🇬🇧</a></li>
-          <li id="italiano"><a href="" alt="italiano">IT 🇮🇹</a></li>
-          <li id="espanol"><a href="./index_es.html" alt="espanol">ES 🇪🇸</a></li>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html">VS</a>
+    
+      <!-- Toggler/collapsible Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
         </ul>
-        <!--Lang Dropdown-->
-        <div class="custom-select">
-          <button class="select-button" role="combobox" aria-labelledby="select button" aria-haspopup="listbox"
-            aria-expanded="false" aria-controls="select-dropdown">
-            <span class="selected-value">Italiano</span>
-            <span class="arrow"></span>
-          </button>
-          <ul class="select-dropdown" role="listbox" id="select-dropdown">
-            <li role="option">
-              <input type="radio" id="italiano" name="language" />
-              <label for="italiano"><a href="#">Italiano</a></label>
-            </li>
-            <li role="option">
-              <input type="radio" id="english" name="language" />
-              <label for="english"><a href="./index.html">English</a></label>
-            </li>
-            <li role="option">
-              <input type="radio" id="espanol" name="language" />
-              <label for="espanol"><a href="./index_es.html">Espanol</a></label>
-            </li>
-          </ul>
-        </div>
-        <div class="header__quick">
-          <div class="icon-hamburger">
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Italiano
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="index.html">English</a>
+              <a class="dropdown-item" href="index_es.html">Espanol</a>
+              <a class="dropdown-item" href="#">Italiano</a>
+            </div>
+          </li>
+        </ul>
       </div>
-    </header>
+    </nav>
+    
+    
+    
+    
     <!--Home-->
     <div class="grid hero" id="home" data-section="home">
       <div class="col-100 pt-5 text-center">
@@ -83,113 +84,43 @@
     </div>
     <!--Who-->
     <section class="grid hero pt-4 mb-1" id="about">
+      <div class="col-50 p-3 relative" >
+        <button id="sbarrato"><h2 class="text-1" style="text-align: left;" >Chi è Veronica Simonte?</h2> <br>
+        <h4 style="text-align: left;">
+          Ciao, sono Veronica Simonte, una designer junior di UI/UX sempre alla ricerca di nuove ispirazioni e innovazioni. <br><br>Il mio percorso nel design è iniziato con un corso di Design Web presso l'Istituto Europeo di Design (IED) e una formazione specializzata in Design di UI/UX presso  Start2impactUniversity. <br><br>Ho inoltre ampliato le mie competenze con un corso su Figma presso Talent Garden, Social Media Marketing presso SDA Bocconi e un corso sui Fondamenti del Marketing Digitale con Google. <br><br>La mia filosofia di design? <br>La vita è troppo breve e stressante per sopportare esperienze digitali noiose! <br><br>Esplora il mio portfolio per vedere le mie creazioni! Sono aperta a nuove sfide e collaborazioni creative, quindi non esitare a contattarmi!</h4></button>
+        <a href="mailto: veronicasimonte@gmail.com" target="_blank" class="button">Let's talk!</a>
+      </div>
       <div class="col-50 p-3 relative">
-        <button id="sbarrato"><h2 class="text-1">Chi è Veronica Simonte?</h2> <br>
-        <h4>
-          Ciao sono Veronica Simonte, una Junior UI/UX Designer alla continua ricerca di nuove ispirazioni ed innovazioni. <br> <br>Il mio percorso nel Design ha avuto inizio con un corso in Web Design all'Istituto Europeo di Design (IED) e una formazione specializzata in UI/UX Design in Start2impact University. <br><br>Ho anche ampliato le mie competenze con un corso su Figma in Talent Garden, sul Social Media Marketing in SDA Bocconi e un corso in Fondamenti del Marketing Digitale con Google. <br><br>La mia filosofia del design? <br>La vita è troppo breve e stressante per sopportare esperienze digitali noiose! <br><br>Scopri il mio portfolio per vedere le mie creazioni. Sono aperta a nuove sfide e collaborazioni creative, quindi non esitare a contattarmi!</h4></button>
-        <a href="mailto: veronicasimonte@gmail.com" target="_blank"class="button">Parliamo!</a>
-      </div>      
-      <div class="col-50 p-3 relative" id="certifications">
         <img src="assets/img/studies/logos.png" class="img-res img-small" height="100" width="100" alt="certifications-logos"> 
       </div>      
     </section>
 
-    <!--Skills & Works-->
-    <div class="col-100 text-center mb-4">
-      <h2 >Skills</h2>
-      <a href="resume.html" class="button">Download my CV!</a>
-    </div>
-    <div class="slider">
-      <div class="slide-track">
-        <div class="slide">
-          <img src="assets/img/skills/f.png" height="3" width="3" alt="skill1" />
-        </div>
-        <div class="slide">
-          <img src="assets/img/skills/2.png" height="100" width="250" alt="skill2" />
-        </div>
-        <div class="slide">
-          <img src="assets/img/skills/3.png" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="assets/img/skills/4.png" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="assets/img/skills/5.png" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="assets/img/skills/6.png" height="100" width="250" alt="" />
+    <section id="work" class="grid grid--center">
+      <div class="col-70 text-center pt-4">
+        <h2>My Skills</h2>
+      </div>      
+      <div class="slider col-100 text-center pt-4">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="assets/img/skills/skills.png" height="2000" width="2000" alt="" />
+          </div>
+          
+          
         </div>
       </div>
-    </div>
 
-    <!--Button CV--> 
-    <section class="grid grid--center" id="work">
-      <div class="col-100 text-center pt-4 pb-3">
-        <h2>Works</h2>
-        <a href="resume.html" target="_blank" class="button">Portfolio review</a>
-        <p id="nudge">Tap the button to see the works or tap below to have a preview</p>
+
+      <div class="col-100 text-center mb-4 mt-4">
+        <a href="resume.html" class="button">GO TO PORTFOLIO</a>
       </div>
-      <div style="height: 40em;"></div>
-      <div class="text-center mt-4 ">
-        <nav id="nav">    
-          <!--Work 3-->
-          <a href="#">
-            <span data-img="1">ORGASMIC</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/comeToOrgasmic.jpg" alt="progetto Orgasmic"/>
-            </div>
-          </a>
-          <!--Work 4-->
-          <a href="#">
-            <span>SUNNEE</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/suneeLetsDive.jpg" alt=""/>
-            </div>
-          </a>
-          <!--Work 5-->
-          <a href="#">
-            <span>VESTITO VERDE</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/vestitoVerde.jpg" alt=""/>
-            </div>
-          </a>
-          <!--Work 6-->
-          <a href="#">
-            <span>WORK IN PROGRESS</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/wip.jpg" alt=""/>
-            </div>
-          </a>
-          <!--Work 7-->
-          <a href="#">
-            <span>WORK IN PROGRESS</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/wip.jpg" alt="" />
-            </div>
-          </a>
-          <!--Work 8-->
-          <a href="#">
-            <span>WORK IN PROGRESS</span>
-            <div class="img-wrapper">
-              <img
-                src="assets/img/projects/wip.jpg" alt="" />
-            </div>
-          </a>
-        </nav>
-      </div>
+      
     </section>
-
-    <!--Footer-->
+  
     <section id="contact">
-      <footer class="footer p-3">
-        <section class="col-50" id="contactsection"> 
+      <footer class="footer grid pt-4">
+        <section class="col-50 p-3 relative" id="contactsection" > 
           <h3>VERONICA SIMONTE</h3>
-          <p>Veronica Simonte è una designer UX/UI con sede in Italia. <br>Per qualsiasi domanda, puoi scrivermi qui...</p>
+          <p>Veronica Simonte è una UX/UI designer con sede in Italia. <br>Per qualsiasi domanda, puoi scrivermi qui.</p>
           <!--contact form-->
           <form id="form">
             <div class="field">
@@ -205,7 +136,7 @@
               <input type="text" name="user_email" id="user_email" required>
             </div>
             <div class="field">
-              <label for="contact_number">contact number</label>
+              <label for="contact_number" type="number">contact number</label>
               <input type="text" name="contact_number" id="contact_number" required>
             </div>        
             <input class="button-34"  type="submit" id="button" value="Send Email">
@@ -221,12 +152,15 @@
           </ul>
         </div> 
       </footer>
+      <div>
       <p class="footer-bottom" id="privacy">
         &copy; 2024 Veronica Simonte <a class="footer-link" href="#modal">Privacy Policy</a>
       </p>
-        </div> 
+    </div>
+    </div> 
     </section>
 
+    
     <!-- Privacy Policy Modal -->
     <div class="modal-wrapper" id="modal">
       <div class="modal-body card">
@@ -411,6 +345,8 @@
       </div>
       <a href="#!" class="outside-trigger"></a>
     </div>
+
+
     <!--Animazione works-->
     <script>
         const nav = document.getElementById("nav");
@@ -492,33 +428,43 @@
     </script>
     <!--Menu sections link-->
     <script>
-      // Get all sections that have an ID defined
-      const sections = document.querySelectorAll("section[id]");
+      // Get all links in the navbar
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+      
       // Add an event listener listening for scroll
       window.addEventListener("scroll", navHighlighter);
+    
       function navHighlighter() {
-    // Get current scroll position
-    let scrollY = window.pageYOffset;      
-    // Now we loop through sections to get height, top, and ID values for each
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 300;
-      const sectionId = current.getAttribute("id"); // Corrected here
-      /*
-      - If our current scroll position enters the space where the current section on screen is, add .active class to the corresponding navigation link, else remove it
-      - To know which link needs an active class, we use the sectionId variable we are getting while looping through sections as a selector
-      */
-      if (
-        scrollY > sectionTop &&
-        scrollY <= sectionTop + sectionHeight
-      ){
-        document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
-      } else {
-        document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+    
+        // Loop through each link in the navbar
+        navLinks.forEach(link => {
+          // Get the target section's ID from the link's href attribute
+          const sectionId = link.getAttribute("href").substring(1);
+          
+          // Find the target section
+          const targetSection = document.getElementById(sectionId);
+          
+          if (targetSection) {
+            // Get the top position of the target section
+            const sectionTop = targetSection.offsetTop - 300;
+            
+            // Check if the scroll position is within the target section
+            if (scrollY > sectionTop && scrollY <= sectionTop + targetSection.offsetHeight) {
+              // Add the 'active' class to the corresponding navigation link
+              link.classList.add("active");
+            } else {
+              // Remove the 'active' class from the navigation link if not in the target section
+              link.classList.remove("active");
+            }
+          }
+        });
       }
-    });
-  }
     </script>
+    
+    
+    
     <!--Language dropdown-->
     <script>
       const customSelect = document.querySelector(".custom-select");
@@ -557,9 +503,6 @@
       });
 
     </script>
-
-
-
   </div>
 </body>
 </html>

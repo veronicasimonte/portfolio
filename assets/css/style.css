@@ -334,7 +334,7 @@ user-select: none;
 .overflow-h{overflow: hidden;}
 
 
-.img-small{height: 270px;object-fit: cover;}
+.img-small{height: 270px;object-fit: contain;}
 .ionicon{width: 20px;height: 20px;margin: 10px;}
 .font-normal{font-weight: 400;}
 
